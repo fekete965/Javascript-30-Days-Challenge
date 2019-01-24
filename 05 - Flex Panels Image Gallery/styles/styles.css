@@ -1,0 +1,103 @@
+html {
+    font-family: 'helvetice neue', sans-serif;
+    font-size: 62.5%;
+    height: 100%;
+    color: white;
+}
+
+header {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+  background: rgb(255, 208, 0);
+}
+
+.container {
+    margin: 5rem auto;
+}
+
+.container--panels {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    height: 100%;
+}
+
+.panel {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50rem;
+    text-align: center;
+    font-size: 4rem;
+    border: .1rem solid black;
+    text-shadow: 2px 2px 1px #000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+.panel > p {
+    -webkit-transition: all 500ms cubic-bezier(1.000, 0, 0.400, 0.800); /* older webkit */
+    -webkit-transition: all 500ms cubic-bezier(1.000, -0.600, 0.400, 0.800); 
+    -moz-transition: all 500ms cubic-bezier(1.000, -0.600, 0.400, 0.800); 
+    -o-transition: all 500ms cubic-bezier(1.000, -0.600, 0.400, 0.800); 
+    transition: all 500ms cubic-bezier(1.000, -0.600, 0.400, 0.800); /* custom */
+}
+
+.panel > p:nth-child(1) {
+    transform: translateY(-15rem);
+}
+
+.panel > p:nth-child(0) {
+    font-size: 6rem;
+}
+
+.panel > p:nth-child(3) {
+    transform: translateY(15rem);
+}
+
+.panel.active {
+    flex: 2;
+}
+
+.panel.active p {
+    transform: scale(2);
+}
+
+.panel.active > p:nth-child(1) {
+    transform: translateY(0);
+}
+
+.panel.active > p:nth-child(3) {
+    transform: translateY(0);
+}
+
+.panel__one {
+    background: url('../images/sample_1.jpg');
+}
+
+.panel__two {
+    background: url('../images/sample_2.jpg');
+    background-size: 84rem;
+}
+
+.panel__three {
+    background: url('../images/sample_3.jpg');
+}
+
+.panel__four {
+    background: url('../images/sample_4.jpg');
+    background-size: 80rem;
+}
+
+.panel__five {
+    background: url('../images/sample_5.jpg');
+    background-size: 90rem;
+}

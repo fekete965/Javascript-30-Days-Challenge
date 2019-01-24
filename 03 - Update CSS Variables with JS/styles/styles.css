@@ -1,0 +1,83 @@
+:root {
+    --baseColor: #117fe6;
+    --spacing: 1rem;
+    --blur: 0px;
+}
+
+html {
+    font-family: 'helvetice neue', sans-serif;
+    font-size: 62.5%;
+    height: 100%;
+    color: white;
+}
+
+header {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(to right bottom, #00417c, #2d4081, #473d82, #5e3981, #73337d);
+    background: -moz-linear-gradient(to right bottom, #00417c, #2d4081, #473d82, #5e3981, #73337d);
+    background: -webkit-linear-gradient(to right bottom, #00417c, #2d4081, #473d82, #5e3981, #73337d);
+    background: -o-linear-gradient(to right bottom, #00417c, #2d4081, #473d82, #5e3981, #73337d);
+    background: -ms-linear-gradient(to right bottom, #00417c, #2d4081, #473d82, #5e3981, #73337d);
+    background: linear-gradient(to right bottom, #00417c, #2d4081, #473d82, #5e3981, #73337d);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00417c', endColorstr='#73337d',GradientType=0 );
+}
+
+.container {
+    margin: 5rem auto;
+}
+
+.container--image {
+    background: var(--baseColor);
+    border: 1.5rem solid white;
+    display: block;
+    margin: 0 auto;
+    padding: 5rem;
+    position: relative;
+    width: 50rem;
+    height: 50rem;
+}
+
+.image {
+    background: url('../images/sample.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: 0 .7rem 5rem black;
+    border: 1rem solid white;
+    border-radius: 50%;
+    display: block;
+    filter: blur(var(--blur));
+    height: 45rem;
+    margin: 0 auto;
+    margin-top: var(--spacing);
+    position: absolute;
+    width: 45rem;
+}
+
+.highlight {
+    color: var(--baseColor);
+}
+
+.container--controls {
+    font-size: 3rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+.controls {
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    width: 40%;
+}
+
+.controls input[type="color"] {
+    border: none;
+    height: 2.5rem;
+    width: 8rem;
+}

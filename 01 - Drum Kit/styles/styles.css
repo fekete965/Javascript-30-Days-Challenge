@@ -1,0 +1,45 @@
+html {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    height: 100%;
+    color: white;
+}
+
+header {
+    font-size: 4.2rem;
+    text-align: center;
+}
+
+body {
+    background: #5b1647;
+    background: -moz-linear-gradient(45deg, #5b1647 0%, #cb0035 50%, #e1c400 100%);
+    background: -webkit-linear-gradient(45deg, #5b1647 0%,#cb0035 50%,#e1c400 100%);
+    background: linear-gradient(45deg, #5b1647 0%,#cb0035 50%,#e1c400 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b1647', endColorstr='#e1c400',GradientType=1 );
+}
+
+.container {
+    height: 10rem;
+    display: block;
+    margin: 10% auto;
+    text-align: center;
+}
+
+.sound {
+    border: 2px solid black;
+    color: black;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 1rem;
+    width: 7.5rem;
+    height: 5rem;
+    line-height: 5rem;
+    transition: all .1s ease;
+}
+
+.sound.playing {
+    border: 2px solid white;
+    color: white;
+    transform: scale(1.2);
+}

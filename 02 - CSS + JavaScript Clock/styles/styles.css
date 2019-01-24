@@ -1,0 +1,80 @@
+html {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    height: 100%;
+    color: white;
+}
+
+header {
+    font-size: 4.2rem;
+    text-align: center;
+}
+
+body {
+    background: #b92b27;
+    background: -moz-linear-gradient(to right, #1565C0, #b92b27);
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);
+    background: linear-gradient(to right, #1565C0, #b92b27);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1565C0', endColorstr='#b92b27',GradientType=1 );
+}
+
+.container {
+    margin: 5rem auto;
+}
+
+
+.clock-base {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    border: .3rem solid white;
+    border-radius: 50%;
+    height: 40rem;
+    width: 40rem;
+}
+
+.clock-base:after {
+    background: white;
+    border-radius: 50%;
+    content: "";
+    height: 5%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 5%;
+    z-index: 10;
+}
+
+.hand {
+    border-radius: .5rem;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    -ms-transform-origin: 100%;
+    -webkit-transform-origin: 100%;
+    transition: all .2s ease-in-out;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand--hour {
+    height: 4%;
+    width: 25%;
+    transform: translate(100%, -50%);
+    z-index: 5;
+}
+
+.hand--minute {
+    height: 3%;
+    width: 33.5%;
+    transform: translate(50%, -50%);
+    z-index: 2;
+}
+
+.hand--second {
+    height: 2%;
+    width: 45%;
+    transform: translate(12%, -50%);
+    z-index: 1;
+}
