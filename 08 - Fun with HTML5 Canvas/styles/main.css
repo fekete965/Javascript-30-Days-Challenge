@@ -1,0 +1,34 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #355C7D;
+  color: #F67280 ;
+}
+
+canvas {
+  background-color: #fff;
+  border: .5em solid #6C5B7B;
+  border-radius: 10px;
+  user-select: none;
+}
+  
+.container {
+  text-align: center;
+  min-width: 800px;
+}
+
+.container--options {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.container--options fieldset {
+  text-align: left;
+  border: .5rem solid #C06C84;
+  border-radius: .5rem;
+}
+
+.container--options fieldset input {
+  margin: .5rem 0;
+}

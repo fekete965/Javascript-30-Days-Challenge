@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fun With HTML5 Canvas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css" />
+</head>
+<body>
+  <div class='container'>
+    <h1>Fun With HTML5 Canvas</h1>
+    <div class='container--options'>
+      <fieldset>
+        <span>
+          <input type="radio" name='color' value='0' id="colorPicker" checked> 
+          Custom color: <input type="color" name='color' id="defaultColor" value='#000000'>
+        </span>
+        </br>
+        <span>
+          <input type="radio" name='color' value='1' id="autoColor">
+          Auto color
+        </span>
+      </fieldset>
+      <fieldset>
+        <span>
+          <input type="radio" name='size' value='0' id="defaultSize" checked>
+          Default size
+        </span>
+        </br>
+        <span>
+          <input type="radio" name='size' value='1' id="autoSize">
+          Auto size
+        </span>
+        </br>
+        <span>
+          <input type="radio" name='size' value='2' id="mouseSpeed">
+          Mouse Speed Based Size
+        </span>
+      </fieldset>
+    </div>
+    <canvas id='myCanvas' height='700' width='700'></canvas>
+  </div>
+</body>
+<script src="./scripts/main.js"></script>
+</html>
