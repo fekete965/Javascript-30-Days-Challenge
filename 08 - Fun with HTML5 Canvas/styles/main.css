@@ -32,3 +32,25 @@ canvas {
 .container--options fieldset input {
   margin: .5rem 0;
 }
+
+.container--actions {
+  display: block;
+  margin-top: .5rem;
+}
+
+.button {
+  padding: .5rem;
+  font-size: 1.2rem;
+  background-color: #6C5B7B;
+  border: .2rem solid #6C5B7B;
+  border-radius: 10px;
+  outline: none;
+  transition: all .2s ease;
+}
+
+.button:hover {
+  background-color: #F67280;
+  color: #fff;
+  border: .2rem solid #F67280;
+  transform: scale(1.1);
+}

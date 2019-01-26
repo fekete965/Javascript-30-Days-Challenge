@@ -5,6 +5,7 @@
   const colorPicer = document.getElementById('colorPicker');
   const radioBtnDC = document.getElementById('defaultColor');
   const radioBtnAC = document.getElementById('autoColor');
+  const btnClear = document.getElementById('btnClear');
 
   const canvas = document.getElementById('myCanvas');
   canvas.width = 700;
@@ -109,6 +110,10 @@
     e.preventDefault();
   };
 
+  const handleOnClick = (e) => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  };
+
 
   radioBtnMS.addEventListener('change', handleOnChange);
 
@@ -132,4 +137,7 @@
   canvas.addEventListener('mouseup', onHandleMouseUp);
 
   canvas.addEventListener('mouseleave', onHandleMouseUp);
+
+
+  btnClear.addEventListener('click', handleOnClick);
 }());
