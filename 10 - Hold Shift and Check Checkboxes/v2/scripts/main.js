@@ -1,6 +1,8 @@
 (function() {
   const checkboxes = document.querySelectorAll('input[type=checkbox]');
 
+  checkboxes.forEach((a) => console.log(a));
+
   let keyPressed = false;
   let targetA = undefined;
   let targetB = undefined;
@@ -32,9 +34,9 @@
   };
 
 
-  for (let i = 0; i < checkboxes.length; i += 1) {
-    checkboxes[i].addEventListener('click', handleOnClick(i));
-  };
+  checkboxes.forEach((checkbox, index) => {
+    checkbox.addEventListener('click', handleOnClick(index));
+  });
 
   const onHandleKeyDown = (e) => {
     if (keyPressed === false && e.keyCode === 16) {
@@ -43,7 +45,7 @@
   };
 
   const onHandleKeyUp = (e) => {
-    if (e.keyCode === 16) {
+    if (keyPressed === true && e.keyCode === 16) {
       keyPressed = false;
     };
   };
@@ -53,7 +55,7 @@
       e.preventDefault();
     };
   };
-  
+
 
   window.addEventListener('keydown', onHandleKeyDown);
 
