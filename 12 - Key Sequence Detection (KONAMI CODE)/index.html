@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Key Sequence Detection (KONAMI CODE)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <div>
+    <div>
+      <div>
+        <h3>Default code</h3>
+        <p>Press: Up, Down, Left, Right</p>
+      </div>
+      <div id='newCode'>
+      </div>
+    </div>
+    <div>
+      <button id='resetCode'>Reset Code</button>
+    </div>
+    <div>
+      <p>To create a new code sequence, press the button above and start typing. When you finished, click again.</p>
+      <button id='createCode'>Create New Code</button>
+    </div>
+    <div id="message"></div>
+  </div>
+
+</body>
+<script src="./scripts/main.js"></script>
+</html>

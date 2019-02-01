@@ -11,33 +11,53 @@
 
     <div class="container--player">
       <div id='player' class='player'>
-        <video id='videoSource' class='player-video'>
-          <source src='./video/sample.mp4' type="video/mp4">
+        <video id='videoSource' class='player-video-source'>
+          <!-- <source src='https://app.coverr.co/s3/mp4/Amalfi-Traffic.mp4'> -->
+          <source src='./video/sample.mp4'>
         </video>
         <div id='playerControls' class='player-controls'>
           <div id='progressBar' class='player-progressbar'>
             <div id='progressBarFill' class='player-progressbar__fill'></div>
+            <div id='progressBarKnob' class='player-progressbar-knob'>
+              <div class='player-progressbar-knob__inside'></div>
+            </div>
+            <div id='progressBarBuffer' class='player-progressbar-buffer'></div>
           </div>
-          <div class='player-primary-actions'>
-            <button id='btnPlayPause' class='button button__play paused' title='Play/Pause'></button>
-            <div class='player-volume'>
+          <div id='containerPrimaryActions' class='container-actions container-actions--primary'>
+            <button id='btnPlayPause' class='button button__play' title='Play/Pause'></button>
+            <div id='containerVolume' class='container--volume'>
               <button id='btnVolume' class='button button__volume'></button>
-              <div class='container--slider'>
-                <div class='player-slider'>
-                  <div id='playerSliderFill' class='player-slider player-slider__fill'></div>
+              <div class='container--volume-slider'>
+                <div id='volumeSlider' class='player-volume-slider'>
+                  <div id='volumeSliderFill' class='player-volume-slider__fill'></div>
+                  <div id='volumeSliderKnob' class='player-volume-slider-knob'></div>
                 </div>
               </div>
             </div>
+            <div class='container--timestamp'>
+              <span id='videoCurrentTime'>0:00</span> / <span id='videoDuration'>0:00</span>
+            </div>
           </div>
-          <div class='player-secondary-actions'>
-            <button id='btnSpeed' class='button button__speed'></button>
+          <div class='container-actions container-actions--secondary'>
+            <button id='btnSpeed' class='button button__speed'>
+              <div id='speedOptions' class='container--speed-options'>
+                <span>2</span>
+                <span>1.5</span>
+                <span class='selected'>1</span>
+                <span>0.5</span>
+              </div>
+            </button>
             <button id='btnSkipBackward' class='button button__skipBackward'></button>
             <button id='btnSkipForward' class='button button__skipForward'></button>
             <button id='btnFullscreen' class='button button__fullscreen'></button>
           </div>
         </div>
+        <div class='container--overlay'>
+          <div id="overlay" class='player-overlay'></div>
+        </div>
       </div>
     </div>
   </body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/classlist/1.2.201711092/classList.min.js'></script>
   <script src='./scripts/main.js'></script>
 </html>
