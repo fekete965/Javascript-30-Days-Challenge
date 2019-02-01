@@ -336,7 +336,6 @@
 
     // Button Volume
     const handleVolumeClick = () => {
-        
         if (playerSrc.volume === 0) {
             playerSrc.volume = Math.max(state.prevVolume, 0.3);
         } else {

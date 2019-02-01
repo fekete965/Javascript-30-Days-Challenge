@@ -81,6 +81,7 @@ video::-webkit-media-controls-enclosure {
   box-shadow: 0 0 2px 0px rgb(35, 43, 43);
   box-shadow: 0 0 2px 0px rgba(35, 43, 43, .8);
   transition: all .1s ease;
+  pointer-events: none;
 }
 
 .container--speed-options > span {
@@ -423,6 +424,7 @@ video::-webkit-media-controls-enclosure {
 
 .button__speed.opened .container--speed-options {
   opacity: 1.25;
+  pointer-events: all;
 }
 
 .button__skipBackward {
