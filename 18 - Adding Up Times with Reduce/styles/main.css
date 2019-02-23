@@ -1,0 +1,26 @@
+body ul {
+    margin: 1rem 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+body ul > li {
+    display: block;
+    margin: .2rem 0;
+    padding: .1rem;
+    min-width: 100px;
+    width: 49%;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+body ul > li:nth-of-type(odd) {
+    float: left;
+    clear: left;
+    border-right: 1px solid black;
+}
+
+body ul > li:nth-of-type(even) {
+    float: left;
+    clear: right;
+}
