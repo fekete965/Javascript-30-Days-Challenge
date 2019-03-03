@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Webcamera fun</title>
+  <link rel='stylesheet' href='./styles/normalize.css'>
+  <link rel='stylesheet' href='./styles/main.css'>
+</head>
+<body>
+
+  <div class='container'>
+    <div class='container--controls'>
+      <button id='btnToggleStart' class='button play'>
+        <i class='icon'></i>
+        <span>Start</span>
+      </button><br>
+      <button id='btnTakePhoto' class='button button--takePhoto' disabled>
+        <i class='icon'></i>
+        <span>Take Photo</span>
+      </button>
+    </div>
+
+    <div class='container--visuals'>
+      <div class="container--video">
+        <canvas id='canvasVideo' class='canvas--video' width='640' height='360'></canvas>
+        <video class='player'></video>
+      </div>
+      <div class='container--filters'>
+        <div>
+          <h4>Ghost effect:</h4>
+          <label>Off</label>
+          <input type='radio' name='ghost' value='0' checked />
+          <label>On</label>
+          <input type='radio' name='ghost' value='1' />
+        </div>
+        <div class='colors'>
+          <h4>Colorize:</h4>
+          <label>Default</label>
+          <input type='radio' name='color' value='default' checked />
+          <label>Red</label>
+          <input type='radio' name='color' value='red' />
+          <label>Green</label>
+          <input type='radio' name='color' value='green' />
+          <label>Blue</label>
+          <input type='radio' name='color' value='blue' />
+        </div>
+        <div class='chromakey'>
+          <div class='container--chroma'>
+            <h4>Chroma Key:</h4>
+            <div>
+              <label>Off</label><input type='radio' name='chroma' value='0' checked />
+              <label>On</label><input type='radio' name='chroma' value='1' />
+            </div>
+          </div>
+          <div class='container--chroma'>
+            <h4>Chroma Key Value:</h4>
+            <div>
+              <label>Red: </label>
+              <input type='number' name='range' min='0' max='255' data-index='0' value='0' disabled/>
+              <label>Green: </label>
+              <input type='number' name='range' min='0' max='255' data-index='1' value='0' disabled />
+              <label>Blue: </label>
+              <input type='number' name='range' min='0' max='255' data-index='2' value='0' disabled />
+              <label>Preview Color: </label>
+              <canvas id='canvasColor' class='canvas--color' width='72' height='24'></canvas>
+            </div>
+            <h4>Upload Background Image:</h4>
+            <div>
+              <div class='container--upload'>
+                <input type='file' id='fileUpload' accept="image/gif, image/jpeg, image/png" />
+                <canvas id='canvasPicture' class='canvas--picture' width='160'></canvas>
+              </div>
+              <button id='btnUpload' class='button' disabled>Upload</button>
+              <button id='btnClear' class='button' disabled>Remove Image</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='photoContainer' class="container--photo"></div>
+  </div>
+  <script src='./scripts/main.js'></script>
+
+</body>
+</html>

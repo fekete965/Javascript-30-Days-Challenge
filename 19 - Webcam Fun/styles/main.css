@@ -1,0 +1,179 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #2D142C;
+  color: #fff;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  padding: .5rem;
+  max-width: 1482px;
+  background: white;
+  border-radius: 10px;
+}
+
+.container--controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.container--visuals {
+  display: flex;
+  justify-content: space-evenly;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.container--video {
+  margin: 2rem 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.container--filters {
+  display: flex;
+  flex-flow: column;
+}
+
+.container--filters > p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.container--filters input {
+  margin: .5rem 1rem .5rem .5rem;
+}
+
+.container--filters h4 {
+  margin-bottom: .2rem;
+}
+
+.container--photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.container--chroma {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.container--chroma > div {
+  display: flex;
+  align-items: center;
+}
+
+.container--chroma input[type='text'],
+.container--chroma input[type='number'] {
+  width: 72px;
+  height: 24px;
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.container--upload {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin: .5rem;
+  align-items: center;
+  width: 120px;
+  height: 48px;
+  background: #EE4540;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 24px;
+  outline: none;
+  line-height: 1;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.button:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+.button.play i.icon {
+  display: inline-block;
+  margin-right: .5rem;
+  width: 24px;
+  height: 24px;
+  background: url('../images/baseline-videocam-24px.svg');
+}
+
+.button.play.on i.icon {
+  display: inline-block;
+  margin-right: .5rem;
+  width: 24px;
+  height: 24px;
+  background: url('../images/baseline-videocam_off-24px.svg');
+}
+
+.button--takePhoto i.icon {
+  display: inline-block;
+  margin-right: .5rem;
+  width: 24px;
+  height: 24px;
+  background: url('../images/baseline-camera_alt-24px.svg');
+}
+
+.canvas--video {
+  display: block;
+  margin: 0 auto;
+  width: 640px;
+  background: #000 url('../images/baseline-tv_off-24px.svg') no-repeat;
+  border-radius: 10px;
+  background-size: 180px;
+  background-position: center;
+}
+
+.canvas--video.streaming {
+  background: #fff;
+}
+
+.canvas--color {
+  margin-left: .5rem;
+  width: 72px;
+  height: 24px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.canvas--picture {
+  width: 160px;
+  height: 90px;
+  background: #000 url('../images/baseline-add_to_photos-24px.svg') no-repeat;
+  border: none;
+  border-radius: 4px;
+  background-size: 50px;
+  background-position: center;
+}
+
+video.player {
+  display: none;
+}
+
+img.photo {
+  display: flex;
+  border: 2px solid #C72C41;
+  width: 360px;
+  height: 180px;
+  margin: .3rem;
+  border-radius: 10px;
+}
