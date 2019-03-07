@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width">
+  <link href='./styles/normalize.css' rel='stylesheet'>
+  <link href='./styles/main.css' rel='stylesheet'>
+</head>
+<body>
+  <div class='container--compassHousing' id='compassHousing'>
+    <div class='container--compassNeedle'></div>
+  </div>
+
+  <div id='info' class='container--info'></div>
+  <div class='container--locations'>
+    First Location:
+    <p>
+      Longitude: <span id='firstLong'>0</span>
+      Latitude: <span id='firstLat'>0</span>
+    </p>
+    Current Location:
+    <p>
+      Longitude: <span id='currentLong'>0</span>
+      Latitude: <span id='currentLat'>0</span>
+    </p>
+  </div>
+  <h1 class="container--speed">
+    <span id='speedValue' class="speed-value">0</span>
+    <span class="units">KM/H</span>
+  </h1>
+  <button id='toggleWatch' class='button'>Start Watch</button>
+
+  <script src='./scripts/main.js'></script>
+</body>
+</html>

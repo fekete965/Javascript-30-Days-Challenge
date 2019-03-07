@@ -1,0 +1,89 @@
+html {
+  font-size: 62.5%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px;
+  background-attachment: fixed;
+}
+
+.container--info {
+  margin: 1rem 0;
+  height: 3rem;
+  color: #f00;
+  font-size: 2.5rem;
+}
+
+.container--locations {
+  margin-top: 3rem;
+  min-width: 475px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.container--locations > p {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.container--locations span {
+  font-weight: bold;
+}
+
+.container--compassHousing,
+.container--compassNeedle {
+  display: block;
+  width: 250px;
+  height: 250px;
+  background: url(../images/compass_housing.svg) no-repeat;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.container--compassNeedle {
+  background: url(../images/compass_needle.svg) no-repeat;
+}
+
+h1 {
+  color: white;
+  font-weight: 100;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.units {
+  margin-left: .8rem;
+  font-size: 15px;
+}
+
+.button {
+  border: none;
+  background: #c1c1c1;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 2rem;
+  transition: all .2s ease;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #fff;
+}
+
+/*Compass: https://thenounproject.com/search/?q=compass&i=592352*/
