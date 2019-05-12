@@ -66,6 +66,7 @@
     };
   };
 
+  // Event Listeners
   myForm.addEventListener('submit', handleOnSubmit);
   btnClearList.addEventListener('click', handleOnClear);
   btnUncheckAll.addEventListener('click', handleCheckUncheckAll(false));

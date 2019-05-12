@@ -108,7 +108,7 @@
   };
 
 
-  // Event Listeners
+  // Event Handlers
   const handleOnKeyUp = (e) => {
     if (e.key !== 'F5') {
       if (state.timeout !== undefined) {
@@ -155,6 +155,7 @@
     };
   };
 
+  // Event Listeners
   window.addEventListener('keyup', handleOnKeyUp);
 
   btnResetCode.addEventListener('click', handleResetOnClick);
